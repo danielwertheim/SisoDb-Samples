@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4A8083BC-1A82-4F45-AE55-1248AE20835C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Examples</RootNamespace>
+    <AssemblyName>Examples</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>
+    </DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EnsureThat">
+      <HintPath>..\..\packages\Ensure.That.0.7.0\lib\net40\EnsureThat.dll</HintPath>
+    </Reference>
+    <Reference Include="NCore">
+      <HintPath>..\..\packages\NCore.0.28.0\lib\net40\NCore.dll</HintPath>
+    </Reference>
+    <Reference Include="PineCone">
+      <HintPath>..\..\packages\PineCone.2.0.0\lib\net40\PineCone.dll</HintPath>
+    </Reference>
+    <Reference Include="SisoDb">
+      <HintPath>..\..\packages\SisoDb.12.0.0\lib\net40\SisoDb.dll</HintPath>
+    </Reference>
+    <Reference Include="SisoDb.Serialization">
+      <HintPath>..\..\packages\SisoDb.12.0.0\lib\net40\SisoDb.Serialization.dll</HintPath>
+    </Reference>
+    <Reference Include="SisoDb.Sql2012">
+      <HintPath>..\..\packages\SisoDb.Sql2012.12.0.0\lib\net40\SisoDb.Sql2012.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Transactions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Ex01Crud\CrudExample.cs" />
+    <Compile Include="Ex01Crud\CrudModel\Address.cs" />
+    <Compile Include="Ex01Crud\CrudModel\Customer.cs" />
+    <Compile Include="Ex01Crud\CrudModel\Order.cs" />
+    <Compile Include="Ex01Crud\CrudModel\OrderLine.cs" />
+    <Compile Include="Ex01Crud\CrudModel\ShoppingIndexes.cs" />
+    <Compile Include="Ex03Image\ImageExample.cs" />
+    <Compile Include="Ex02Interfaces\InterfaceExample.cs" />
+    <Compile Include="Ex04Json\JsonExample.cs" />
+    <Compile Include="Ex05TransactionScopes\TsModel\Account.cs" />
+    <Compile Include="Ex05TransactionScopes\ScenarioWithoutTransactionScopeExample.cs" />
+    <Compile Include="Ex05TransactionScopes\TsModel\Transaction.cs" />
+    <Compile Include="Ex05TransactionScopes\ScenarioWithTransactionScopeExample.cs" />
+    <Compile Include="Ex06Includes\Address.cs" />
+    <Compile Include="Ex06Includes\Booking.cs" />
+    <Compile Include="Ex06Includes\Customer.cs" />
+    <Compile Include="Ex06Includes\IncludesExample.cs" />
+    <Compile Include="Ex06Includes\Phone.cs" />
+    <Compile Include="Ex06Includes\Room.cs" />
+    <Compile Include="Ex06Includes\RoomTypes.cs" />
+    <Compile Include="Ex07ModelUpdates\ModelUpdatesExample.cs" />
+    <Compile Include="Ex07ModelUpdates\New\SalesPerson.cs" />
+    <Compile Include="Ex07ModelUpdates\Old\Person.cs" />
+    <Compile Include="Ex08ControlWhatToIndex\ControlWhatToIndexExample.cs" />
+    <Compile Include="Example.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Penguins.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
